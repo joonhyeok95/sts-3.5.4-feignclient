@@ -17,7 +17,7 @@ import com.metanet.study.interfaces.dto.UserResponseDto;
 )
 public interface UserClient {
 
-  @GetMapping("/api/users")
+  @GetMapping("/api/users/all")
   ApiResponse<List<UserResponseDto>> getUserAll();
 
   @GetMapping("/api/users/{id}")
