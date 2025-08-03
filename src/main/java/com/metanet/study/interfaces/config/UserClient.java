@@ -24,7 +24,7 @@ public interface UserClient {
   ApiResponse<UserResponseDto> getUserById(@PathVariable("id") Long id);
 
   @PostMapping("/api/users")
-  ApiResponse createUser(@RequestBody UserRequestDto userRequest);
+  ApiResponse<?> createUser(@RequestBody UserRequestDto userRequest);
 
   @PutMapping("/api/users/{id}")
   ApiResponse<UserResponseDto> updateUser(@PathVariable("id") Long id,

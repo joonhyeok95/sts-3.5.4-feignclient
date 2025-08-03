@@ -25,7 +25,7 @@ public class UserClientService {
   }
 
   public int createUser(UserRequestDto dto) {
-    ApiResponse response = userClient.createUser(dto);
+    ApiResponse<?> response = userClient.createUser(dto);
     return (int) response.getResult();
   }
 
