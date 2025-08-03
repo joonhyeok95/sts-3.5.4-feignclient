@@ -14,7 +14,6 @@ public class CustomFeignErrorDecoder implements ErrorDecoder {
 
   @Override
   public Exception decode(String methodKey, Response response) {
-    log.info("Exception:::decode!!!!");
     int status = response.status();
     String body = "";
     try (InputStream inputStream = response.body().asInputStream();
@@ -24,6 +23,7 @@ public class CustomFeignErrorDecoder implements ErrorDecoder {
       // body 사용
     } catch (IOException e) {
       // 예외 처리
+      log.warn("Feign error body 읽기 실패", e);
     }
 
     switch (status) {
