@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.metanet.study.global.domain.ApiResponse;
+import com.metanet.study.global.exception.ExternalServerException;
+import com.metanet.study.global.exception.NotFoundException;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;

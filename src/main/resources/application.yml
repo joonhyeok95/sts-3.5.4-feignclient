@@ -40,4 +40,4 @@ server.port: 8081
 
 logging:
   level: 
-    root: INFO
+    root: DEBUG # feignclient FULL 로그를 보려면 DEBUG

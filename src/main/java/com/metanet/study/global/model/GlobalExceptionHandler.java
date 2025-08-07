@@ -5,8 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import com.metanet.study.global.configuration.NotFoundException;
 import com.metanet.study.global.domain.ApiResponse;
+import com.metanet.study.global.exception.NotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 
 @RestControllerAdvice

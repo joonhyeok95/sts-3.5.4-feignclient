@@ -1,4 +1,4 @@
-package com.metanet.study.global.configuration;
+package com.metanet.study.global.exception;
 
 public class NotFoundException extends RuntimeException {
   private static final long serialVersionUID = 1L;
