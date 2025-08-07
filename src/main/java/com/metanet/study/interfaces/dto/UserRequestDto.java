@@ -12,7 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRequestDto {
-
   @NotBlank(message = "Name is mandatory")
   private String name;
 

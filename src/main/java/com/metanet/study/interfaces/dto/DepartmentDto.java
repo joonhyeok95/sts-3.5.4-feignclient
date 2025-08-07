@@ -12,6 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class DepartmentDto {
   @NotNull(message = "Department id is mandatory")
-  private Long id;
+  private long id;
   // private String name;
 }

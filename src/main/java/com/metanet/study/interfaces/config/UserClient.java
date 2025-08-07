@@ -21,15 +21,15 @@ public interface UserClient {
   ApiResponse<List<UserResponseDto>> getUserAll();
 
   @GetMapping("/api/users/{id}")
-  ApiResponse<UserResponseDto> getUserById(@PathVariable("id") Long id);
+  ApiResponse<UserResponseDto> getUserById(@PathVariable("id") long id);
 
   @PostMapping("/api/users")
-  ApiResponse<?> createUser(@RequestBody UserRequestDto userRequest);
+  ApiResponse<Long> createUser(@RequestBody UserRequestDto userRequest);
 
   @PutMapping("/api/users/{id}")
-  ApiResponse<UserResponseDto> updateUser(@PathVariable("id") Long id,
+  ApiResponse<UserResponseDto> updateUser(@PathVariable("id") long id,
       @RequestBody UserRequestDto userRequest);
 
   @DeleteMapping("/api/users/{id}")
-  void deleteUser(@PathVariable("id") Long id);
+  ApiResponse<?> deleteUser(@PathVariable("id") long id);
 }

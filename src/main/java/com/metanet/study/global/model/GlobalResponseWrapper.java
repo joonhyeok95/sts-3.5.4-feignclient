@@ -1,19 +1,19 @@
 package com.metanet.study.global.model;
 
 import java.util.Locale;
-
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpResponse;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
-
 import com.metanet.study.global.domain.ApiResponse;
 
-@RestControllerAdvice
+/*
+ * controller 에서 ResponseEntity를 선언하지 않아도 wrapper로 전역적으로 감쌀 수 있다.
+ */
+// @RestControllerAdvice
 public class GlobalResponseWrapper implements ResponseBodyAdvice<Object> {
 
   @Override
