@@ -18,6 +18,8 @@ public class UserRequestDto {
   @Email(message = "Email should be valid")
   private String email;
 
-  private DepartmentDto department;
+  // 일반적인 API 쓰펙으로 변경
+  // private DepartmentDto department;
+  private String departmentId;
 
 }
