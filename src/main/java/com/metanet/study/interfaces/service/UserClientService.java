@@ -3,6 +3,7 @@ package com.metanet.study.interfaces.service;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import com.metanet.study.global.domain.ApiResponse;
+import com.metanet.study.global.domain.PageResponse;
 import com.metanet.study.interfaces.config.UserClient;
 import com.metanet.study.interfaces.dto.UserRequestDto;
 import com.metanet.study.interfaces.dto.UserResponseDto;
@@ -18,6 +19,11 @@ public class UserClientService {
 
   public List<UserResponseDto> getAllUsers() {
     ApiResponse<List<UserResponseDto>> response = userClient.getUserAll();
+    return response.getResult(); // result 필드에 실제 데이터
+  }
+
+  public PageResponse<UserResponseDto> getAllUsersPage(int page, int size) {
+    ApiResponse<PageResponse<UserResponseDto>> response = userClient.getUserAll(page, size);
     return response.getResult(); // result 필드에 실제 데이터
   }
 

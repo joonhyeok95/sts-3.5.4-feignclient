@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import com.metanet.study.global.domain.ApiResponse;
+import com.metanet.study.global.domain.PageResponse;
 import com.metanet.study.interfaces.dto.UserRequestDto;
 import com.metanet.study.interfaces.dto.UserResponseDto;
 
@@ -19,6 +21,10 @@ public interface UserClient {
 
   @GetMapping("/api/users/all")
   ApiResponse<List<UserResponseDto>> getUserAll();
+
+  @GetMapping("/api/users")
+  ApiResponse<PageResponse<UserResponseDto>> getUserAll(@RequestParam("page") int page,
+      @RequestParam("size") int size);
 
   @GetMapping("/api/users/{id}")
   ApiResponse<UserResponseDto> getUserById(@PathVariable("id") long id);

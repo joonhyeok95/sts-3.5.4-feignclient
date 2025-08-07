@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.metanet.study.global.domain.ApiResponse;
+import com.metanet.study.global.domain.PageResponse;
 import com.metanet.study.global.model.ResponseEntityUtil;
 import com.metanet.study.interfaces.dto.UserRequestDto;
 import com.metanet.study.interfaces.dto.UserResponseDto;
@@ -30,13 +32,22 @@ public class FeignCallController {
   /*
    * GlobalResponseWrapper 를 활용했을 때 GlobalResponseWrapper.java
    */
-  @GetMapping
+  @GetMapping("/all")
   public List<UserResponseDto> getAllUsers() {
     List<UserResponseDto> users = userClientService.getAllUsers();
     return users;
   }
 
   // ResponseEntity
+  @GetMapping
+  public ResponseEntity<ApiResponse<PageResponse<UserResponseDto>>> getAllUsers(
+      @RequestParam("page") int page, @RequestParam("size") int size, HttpServletRequest request) {
+
+    PageResponse<UserResponseDto> datas = userClientService.getAllUsersPage(page, size);
+    return ResponseEntityUtil.buildResponse(datas, HttpStatus.OK, "User retrieved successfully",
+        request);
+  }
+
   @GetMapping("/{id}")
   public ResponseEntity<ApiResponse<UserResponseDto>> getUser(@PathVariable("id") long id,
       HttpServletRequest request) {
