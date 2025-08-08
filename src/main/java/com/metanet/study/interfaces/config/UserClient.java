@@ -20,7 +20,7 @@ import com.metanet.study.interfaces.dto.UserResponseDto;
 public interface UserClient {
 
   @GetMapping("/api/users/all")
-  ApiResponse<List<UserResponseDto>> getUserAll();
+  List<UserResponseDto> getUserAll(); // 규격이 없는 API 케이스
 
   @GetMapping("/api/users")
   ApiResponse<PageResponse<UserResponseDto>> getUserAll(@RequestParam("page") int page,

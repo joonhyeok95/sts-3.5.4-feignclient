@@ -18,8 +18,8 @@ public class UserClientService {
   private final UserClient userClient;
 
   public List<UserResponseDto> getAllUsers() {
-    ApiResponse<List<UserResponseDto>> response = userClient.getUserAll();
-    return response.getResult(); // result 필드에 실제 데이터
+    List<UserResponseDto> response = userClient.getUserAll();
+    return response; // result 필드에 실제 데이터
   }
 
   public PageResponse<UserResponseDto> getAllUsersPage(int page, int size) {
