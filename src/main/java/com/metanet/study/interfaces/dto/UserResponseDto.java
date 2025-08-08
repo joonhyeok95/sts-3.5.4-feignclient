@@ -14,8 +14,8 @@ public class UserResponseDto {
   private long id;
   private String name;
   private String email;
-  // 일반적인 API 스펙으로 변경
-  // private DepartmentDto department;
-  private String departmentId;
+
+  // 부서는 없을 수도 있다는 조건 추가
+  private Long departmentId;
   private String departmentName;
 }
