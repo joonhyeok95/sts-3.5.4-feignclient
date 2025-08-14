@@ -1,12 +1,12 @@
-package com.metanet.study.interfaces.service;
+package com.metanet.study.interfaces.domain.service;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
 import com.metanet.study.global.domain.ApiResponse;
 import com.metanet.study.global.domain.PageResponse;
-import com.metanet.study.interfaces.config.UserClient;
-import com.metanet.study.interfaces.dto.UserRequestDto;
-import com.metanet.study.interfaces.dto.UserResponseDto;
+import com.metanet.study.interfaces.domain.config.UserClient;
+import com.metanet.study.interfaces.domain.service.dto.UserRequestDto;
+import com.metanet.study.interfaces.domain.service.dto.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

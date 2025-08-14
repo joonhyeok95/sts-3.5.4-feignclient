@@ -1,4 +1,4 @@
-package com.metanet.study.interfaces.controller;
+package com.metanet.study.interfaces.web;
 
 import java.util.List;
 import org.springframework.http.HttpStatus;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.metanet.study.global.domain.ApiResponse;
 import com.metanet.study.global.domain.PageResponse;
 import com.metanet.study.global.model.ResponseEntityUtil;
-import com.metanet.study.interfaces.dto.UserRequestDto;
-import com.metanet.study.interfaces.dto.UserResponseDto;
-import com.metanet.study.interfaces.service.UserClientService;
+import com.metanet.study.interfaces.domain.service.UserClientService;
+import com.metanet.study.interfaces.domain.service.dto.UserRequestDto;
+import com.metanet.study.interfaces.domain.service.dto.UserResponseDto;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

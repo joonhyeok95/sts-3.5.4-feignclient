@@ -1,4 +1,4 @@
-package com.metanet.study.interfaces.config;
+package com.metanet.study.interfaces.domain.config;
 
 import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.metanet.study.global.domain.ApiResponse;
 import com.metanet.study.global.domain.PageResponse;
-import com.metanet.study.interfaces.dto.UserRequestDto;
-import com.metanet.study.interfaces.dto.UserResponseDto;
+import com.metanet.study.interfaces.domain.service.dto.UserRequestDto;
+import com.metanet.study.interfaces.domain.service.dto.UserResponseDto;
 
 @FeignClient(name = "user-service", url = "${user-service.url}"
 // , configuration = CustomFeignConfig.class // 인터셉터, 에러 디코더 따로 관리 가능

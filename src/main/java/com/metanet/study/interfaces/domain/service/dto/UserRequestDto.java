@@ -1,4 +1,4 @@
-package com.metanet.study.interfaces.dto;
+package com.metanet.study.interfaces.domain.service.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
